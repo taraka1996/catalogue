@@ -1,23 +1,7 @@
 @Library('roboshop') _
 
-pipeline {
-  agent any    
+env.component="catalogue"
+env.app_lang = "nodejs"
 
-  stages {
-
-    stage('compile/build') {
-      steps {
-        echo 'compile/build'
-      }
-    }  
-  
-
-    stage('test cases') {
-      steps {
-        echo 'test cases'
-      }
-    }
-
-  }
-}
+ci()
 
